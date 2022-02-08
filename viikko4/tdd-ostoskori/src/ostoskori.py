@@ -4,7 +4,6 @@ from ostos import Ostos
 class Ostoskori:
     def __init__(self):
         self.ostoslista = []
-        # ostoskori tallettaa Ostos-oliota, yhden per korissa oleva Tuote
 
     def tavaroita_korissa(self):
         if not self.ostoslista:
@@ -48,8 +47,7 @@ class Ostoskori:
                 del self.ostoslista[i]
         
     def tyhjenna(self):
-        pass
-        # tyhjentää ostoskorin
+        self.ostoslista.clear()
 
     def ostokset(self):
         return self.ostoslista
